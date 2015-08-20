@@ -97,6 +97,9 @@ public class ForecastActivity extends Activity implements OnClickListener {
         }
 
         View fullLayout = ForecastBuilder.buildFullPanel(this, R.layout.forecast_activity, weather);
+
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_BLUR_BEHIND);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED);
         setContentView(fullLayout);
         fullLayout.requestFitSystemWindows();
 
